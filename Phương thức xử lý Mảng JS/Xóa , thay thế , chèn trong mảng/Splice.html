@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //vd1 
+        let arr = ['Lý' , 'Huỳnh ' , 'Huu' , 'Trí']
+        arr.splice(1,2) // vị trí bắt đầu tính từ 0, và số lượng muốn xóa
+        document.write(arr,"<br>") //huu,Tri
+        
+        //vd2
+        let student = [
+            {
+                id : 1 ,
+                name : "Lý Huỳnh Hữu Trí"
+            },
+            {
+                id : 2 ,
+                name : "Lý Huỳnh Hữu Tín"
+            }
+        ]
+        for(let i = 0 ; i < student.length ; i++){
+            if(student[i].id == 2 ){
+                student.splice(i,1);
+            }
+        }
+        document.write(student,"<br>")
+
+        //vd3 xóa các phần tử lẻ trong mảng
+        let numbers = [1,2,3,4,5,6,7,8,9,10]
+        for(let i = 0 ; i < numbers.length ; i++){
+            if(numbers[i]%2!=0){
+               numbers.splice(i ,1 )
+            }
+        }
+        document.write(numbers,"<br>") //2,4,6,8,10
+         
+
+        //vd 4  add vào mảng
+        let nb = [2,3,4,5,6,7,8]
+        nb.splice(3,0,123) // chèn tại vị trí 3 sau sô 4 , 0 xóa , thêm 123
+        document.write(nb ,"<br>") //2,3,4,123,5,6,7,8
+
+        // vd 4 thay thế 
+            // Tiếp tục với array chứa các số 
+            let numers = [1,2,3,4,6,6,7];
+            // như các bạn thấy số 5 bị lặp lại 2 lần
+           numers.splice(4,1,5); // thay số tại vị trí sau số 4 1 số là số 5
+            document.write(numers,"<br>") // [1,2,3,4,5,6,7]
+
+
+            
+            for(let i = 0 ; i < numers.length ; i ++){
+
+                numers.splice(i,1 ,0)
+            }
+                document.write(numers,"<br>") //0,0,0,0,0,0,0
+    </script>
+</body>
+</html>
